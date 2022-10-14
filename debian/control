@@ -1,0 +1,24 @@
+Source: node-path-is-absolute
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Sruthi Chandran <srud@disroot.org>
+Build-Depends: debhelper-compat (= 12)
+ , pkg-js-tools (>= 0.9.20~)
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-path-is-absolute
+Vcs-Git: https://salsa.debian.org/js-team/node-path-is-absolute.git
+Homepage: https://github.com/sindresorhus/path-is-absolute
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: node-path-is-absolute
+Architecture: all
+Depends: ${misc:Depends}
+ , nodejs
+Description: Node.js 0.12 path.isAbsolute() ponyfill
+ Path-is-absolute is a Node.js module that gives developers the ability to
+ determine whether a path written in programming language is an absolute path.
+ An absolute path will always resolve to the same location, regardless of the
+ working directory. Path-is-absolute is a ponyfill, meaning that it does not
+ overwrite the native method in a JavaScript environment.
